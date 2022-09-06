@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: arinx
+spec:
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
+    matchLabels:
+     app: arinx
+   template:
+      metadata:
+        labels:
+          app: arinx
+      spec:
+       containers:
+        - name: arinx
+          image: arinx/pipeline-demo
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
