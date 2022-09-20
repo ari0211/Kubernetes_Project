@@ -1,7 +1,5 @@
 - hosts: all
   become: true
-  become_user: root
-  become_method: su
   tasks: 
     # - name: delete old deployment
     #   shell: "kubectl delete -f /home/ubuntu/Deployment.yml --kubeconfig=/home/ubuntu/.kube/config"
