@@ -2,7 +2,7 @@
   become: true
   tasks: 
      - name: delete old deployment
-       shell: 'kubectl delete -f /home/ubuntu/Deployment.yml"
+       shell: "kubectl delete -f /home/ubuntu/Deployment.yml"
      - name: delete old service
        shell: "kubectl delete -f /home/ubuntu/Service.yml"
      - name: create new deployment
