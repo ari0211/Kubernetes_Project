@@ -1,7 +1,7 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: arinx
+  app: arinx
   labels:
     app: arinx
 spec:
