@@ -10,4 +10,4 @@
      - name: create new service
        shell: "kubectl apply -f /home/ubuntu/Service.yml --kubeconfig=/home/ubuntu/.kube/config"
      - name: add port-forwarding for external access
-       shell: "kubectl port-forward --address 0.0.0.0 service/arinx 8080:8080"
+       shell: "kubectl port-forward --address 0.0.0.0 service/arinx 8080:8080 --kubeconfig=/home/ubuntu/.kube/config"
