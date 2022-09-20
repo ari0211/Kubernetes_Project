@@ -5,6 +5,8 @@
     #   shell: "kubectl delete -f /home/ubuntu/Deployment.yml --kubeconfig=/home/ubuntu/.kube/config"
     # - name: delete old service
     #   shell: "kubectl delete -f /home/ubuntu/Service.yml --kubeconfig=/home/ubuntu/.kube/config"
+     - name: become root user
+       shell: "sudo su"
      - name: create new deployment
        shell: "kubectl apply -f /home/ubuntu/Deployment.yml --kubeconfig=/home/ubuntu/.kube/config"
      - name: create new service
